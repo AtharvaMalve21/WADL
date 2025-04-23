@@ -1,0 +1,116 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container my-5">
+  <% if(locals.error) { %>
+  <div class="alert alert-danger" role="alert"><%= error %></div>
+  <% } %>
+  <div
+    class="card shadow-lg border-0 rounded-4 mx-auto"
+    style="max-width: 800px"
+  >
+    <div class="card-body p-4">
+      <h2 class="text-center text-primary fw-bold mb-4">Edit Listing</h2>
+
+      <% if (locals.listing) { %>
+      <form action="/listings/<%= listing._id %>?_method=PUT" method="POST">
+        <!-- Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label fw-semibold"
+            >Listing Title</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="title"
+            value="<%= listing.title %>"
+            required
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label fw-semibold"
+            >Description</label
+          >
+          <textarea
+            class="form-control"
+            name="description"
+            id="description"
+            rows="3"
+            required
+          >
+<%= listing.description %></textarea
+          >
+        </div>
+
+        <!-- Image URL -->
+        <div class="mb-3">
+          <label for="image" class="form-label fw-semibold">Image URL</label>
+          <input
+            type="url"
+            class="form-control"
+            name="imageUrl"
+            id="image"
+            value="<%= listing.imageUrl %>"
+            required
+          />
+        </div>
+
+        <!-- Price & Location -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="price" class="form-label fw-semibold"
+              >Price per Night (USD)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              name="price"
+              id="price"
+              value="<%= listing.price %>"
+              required
+            />
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="location" class="form-label fw-semibold"
+              >City / Locality</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="location"
+              id="location"
+              value="<%= listing.location %>"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div class="mb-3">
+          <label for="country" class="form-label fw-semibold">Country</label>
+          <input
+            type="text"
+            class="form-control"
+            name="country"
+            id="country"
+            value="<%= listing.country %>"
+            required
+          />
+        </div>
+
+        <!-- Submit -->
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-outline-dark btn-lg shadow-sm">
+            <i class="bi bi-save me-2"></i>Edit Listing
+          </button>
+        </div>
+      </form>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer.ejs") %>

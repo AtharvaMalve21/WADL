@@ -1,0 +1,88 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 2rem;
+  }
+  
+  /* Layout Container */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* User Card Styling */
+  .user-card {
+    background: linear-gradient(to bottom right, #ffffff, #f0faff);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  
+  /* Card Hover Effect */
+  .user-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    border-color: #38bdf8;
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border: 3px solid #38bdf8;
+  }
+  
+  /* User Info */
+  .user-info h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+    font-size: 1.5rem;
+  }
+  
+  .user-info p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Skills */
+  .skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    background-color: #bae6fd;
+    color: #0c4a6e;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+  }
+  
+  .skills-list li:hover {
+    background-color: #38bdf8;
+    color: white;
+  }
+  

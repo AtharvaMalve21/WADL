@@ -1,0 +1,27 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">Dashboard</h1>
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <a href="/add" class="btn btn-sm btn-outline-secondary">+ New User</a>
+    </div>
+  </div>
+</div>
+
+<div class="dashboard-container">
+  <% for(let custData of data) { %>
+  <div class="dashboard">
+    <div class="customer-details">
+      <h1><%= custData.name %></h1>
+      <p><%= custData.email %></p>
+    </div>
+    <div class="customer-updates">
+      <a href="" class="btn btn-sm btn-dark">View</a>
+      <a href="" class="btn btn-sm btn-primary">Update</a>
+      <a href="" class="btn btn-sm btn-success">Delete</a>
+    </div>
+  </div>
+
+  <% } %>
+</div>

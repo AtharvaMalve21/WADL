@@ -1,0 +1,31 @@
+
+
+.sidebar {
+    height: 100vh;
+    width: 280px;
+}
+
+.admin-panel {
+    display: flex;
+    gap: 2rem;
+}
+
+.admin {
+    margin: 20px;
+    height: 300px;
+}
+
+.form {
+    margin-top: 20px;
+    visibility: hidden;
+    width: 700px;
+
+}
+
+input {
+    width: 300px;
+}
+
+main {
+    /* background-color: black; */
+}
